@@ -1,8 +1,8 @@
+import os
 import requests
 import time
 
-import os
-TOKEN = os.environ.get(8749602851:AAEHUDRN1j7ORZF9J8FgIGKzAy7H5voO__0)
+TOKEN = os.environ.get("BOT_TOKEN")
 URL = f"https://api.telegram.org/bot{TOKEN}/"
 
 def get_updates(offset=None):
@@ -23,4 +23,3 @@ while True:
         if msg.get("text") == "/start":
             send_message(msg["chat"]["id"], "Привет! Добро пожаловать в салон! 💅")
     time.sleep(1)
-
